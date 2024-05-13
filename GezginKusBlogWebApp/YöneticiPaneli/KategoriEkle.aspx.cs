@@ -5,6 +5,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using VeriErisimKatmanii;
 
 namespace GezginKusBlogWebApp.YöneticiPaneli
 {
@@ -46,6 +47,36 @@ namespace GezginKusBlogWebApp.YöneticiPaneli
                 pnl_basarisiz.Visible = true;
                 lbl_basarisiz.Text = "Kategori Adı Boş Bırakılamaz!";
             }
+        }
+
+        protected void lbtn_ModelİleEkle_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(tb_isim.Text))
+            {
+                Kategori kat = new Kategori();
+                kat.Isim = tb_isim.Text;
+                kat.Aciklama = tb_aciklama.Text;
+                kat.Durum = cb_durum.Checked;
+                VeriModeli db = new VeriModeli();
+                if (db.KategoriEkle(kat))
+                {
+                    pnl_basarili.Visible = true;
+                    pnl_basarisiz.Visible = false;
+                }
+                else
+                {
+                    pnl_basarili.Visible = false;
+                    pnl_basarisiz.Visible = true;
+                    lbl_basarisiz.Text = "Kategori eklenirken bir hata oluştu!";
+                }
+            }
+            else
+            {
+                pnl_basarili.Visible = false;
+                pnl_basarisiz.Visible = true;
+                lbl_basarisiz.Text = "Kategori adı boş bırakılamaz!";
+            }
+
         }
     }
 }

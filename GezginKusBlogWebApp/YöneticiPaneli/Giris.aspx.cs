@@ -6,6 +6,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using VeriErisimKatmanii;
 
 namespace GezginKusBlogWebApp.YöneticiPaneli
 {
@@ -48,6 +49,67 @@ namespace GezginKusBlogWebApp.YöneticiPaneli
                         {
                             pnl_mesaj.Visible = true;
                             lbl_mesaj.Text = "Kullanıcı Bulunamadı!";
+                        }
+                    }
+                    else
+                    {
+                        pnl_mesaj.Visible = true;
+                        lbl_mesaj.Text = "Lütfen geçerli bir mail adresi giriniz!";
+                        tb_mail.BorderColor = Color.Red;
+                    }
+                }
+                else
+                {
+                    pnl_mesaj.Visible = true;
+                    lbl_mesaj.Text = "Lütfen şifrenizi boş bırakmayın!";
+                    tb_sifre.BorderColor = Color.Red;
+
+                }
+            }
+            else
+            {
+                pnl_mesaj.Visible = true;
+                lbl_mesaj.Text = "Mail adresi boş bırakılamaz!";
+                tb_mail.BorderColor = Color.Red;
+            }
+        }
+
+        protected void btn_girismodel_Click(object sender, EventArgs e)
+        {
+            string mail = tb_mail.Text;
+            string sifre = tb_sifre.Text;
+
+            tb_mail.BorderColor = tb_sifre.BorderColor = Color.Empty;
+            pnl_mesaj.Visible = false;
+
+            if (!string.IsNullOrEmpty(tb_mail.Text))
+            {
+                if (!string.IsNullOrEmpty(tb_sifre.Text))
+                {
+                    if (tb_mail.Text.Contains("@"))
+                    {
+                        VeriModeli db = new VeriModeli();
+                        Yonetici yonetici = db.YöneticiGiris(tb_mail.Text, tb_mail.Text);
+                        if (yonetici != null)
+                        {
+                            if (yonetici.Silinmis != true)
+                            {
+                                Session["yönetici"] = yonetici;
+                                // Session sunucuda değil kullanıcının(client) browserının ram'inde veri tutmaya devam eder.
+                                Response.Redirect("Default.aspx");
+                            }
+                            else
+                            {
+                                pnl_mesaj.Visible = true;
+                                lbl_mesaj.Text = "Yönetici hesabınız Admin tarafından askıya alınmıştır!";
+                                tb_mail.BorderColor = Color.Red;
+                            }
+                        }
+                        else
+                        {
+                            pnl_mesaj.Visible = true;
+                            lbl_mesaj.Text = "Kullanici Bulunamadı!";
+                            tb_mail.BorderColor = Color.Red;
                         }
                     }
                     else

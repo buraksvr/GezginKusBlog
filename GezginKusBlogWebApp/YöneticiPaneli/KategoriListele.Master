@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="KategoriListele.master.cs" Inherits="GezginKusBlogWebApp.YöneticiPaneli.KategoriListele" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                    <h1 class="h2">Kategori İşlemleri</h1>
+                    </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">Kategori Listesi</h3>
+                            </div>
+                            <asp:ListView ID="lv.Kategoriler" runat="server">
+                                <LayoutTemplate>
+                                    <table class="table table-bordered table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th>ID</th>
+                                                <th>Isim</th>
+                                                <th>Açıklama</th>
+                                                <th>Durum</th>
+                                                <th>Seçenekler</th>
+                                            </tr>
+                                        </thead>  
+                                        
+                                    </table>
+                                </LayoutTemplate>
+                            </asp:ListView>
+                        </div>
+                    </div>
+                </div>
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+</body>
+</html>

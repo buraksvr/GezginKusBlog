@@ -7,14 +7,11 @@ using System.Web.UI.WebControls;
 
 namespace GezginKusBlogWebApp.YöneticiPaneli
 {
-    public partial class YoneticiPanel : System.Web.UI.MasterPage
+    public partial class KategoriListele : System.Web.UI.MasterPage
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["yönetici"] == null) 
-            {
-                Response.Redirect("Giris.aspx");
-            }
+
         }
     }
 }

@@ -8,5 +8,6 @@ namespace VeriErisimKatmanii
 {
     internal class BaglantiYollari
     {
+       public static string BaglantiYolu = @"Data Source=.\SQLEXPRESS; Initial Catalog=GezginKus_DB; Integrated Security=True";
     }
 }

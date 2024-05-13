@@ -36,7 +36,9 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <asp:LinkButton ID="lbtn_ekle" runat="server" CssClass="btn btn-primary" OnClick="lbtn_ekle_Click">Kategori Ekle</asp:LinkButton>
+                    <asp:LinkButton ID="lbtn_ekle" runat="server" CssClass="btn btn-primary" OnClick="lbtn_ekle_Click" Visible="false">Kategori Ekle</asp:LinkButton>
+
+                    <asp:LinkButton ID="lbtn_ModelİleEkle" runat="server" CssClass="btn btn-primary" OnClick="lbtn_ModelİleEkle_Click">Kategori Ekle</asp:LinkButton>
                     <a href="KategoriEkle.aspx" class="btn-link m-2" >Kategori Listesine Dön</a>
                 </div>
             </div>

@@ -119,6 +119,13 @@
     <Compile Include="YöneticiPaneli\KategoriEkle.aspx.designer.cs">
       <DependentUpon>KategoriEkle.aspx</DependentUpon>
     </Compile>
+    <Compile Include="YöneticiPaneli\KategoriListele.Master.cs">
+      <DependentUpon>KategoriListele.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="YöneticiPaneli\KategoriListele.Master.designer.cs">
+      <DependentUpon>KategoriListele.Master</DependentUpon>
+    </Compile>
     <Compile Include="YöneticiPaneli\YoneticiPanel.Master.cs">
       <DependentUpon>YoneticiPanel.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -159,8 +166,14 @@
     </None>
     <Content Include="YöneticiPaneli\KategoriEkle.aspx" />
     <Content Include="YöneticiPaneli\YoneticiPanel.Master" />
+    <Content Include="YöneticiPaneli\KategoriListele.Master" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\VeriErisimKatmanii\VeriErisimKatmanii.csproj">
+      <Project>{504a2504-c6ab-4faf-9d45-6ad33c0f57e0}</Project>
+      <Name>VeriErisimKatmanii</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

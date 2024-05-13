@@ -57,3 +57,5 @@ C:\Users\burak\Documents\GitHub\GezginKusBlog\GezginKusBlogWebApp\obj\Debug\Gezg
 C:\Users\burak\Documents\GitHub\GezginKusBlog\GezginKusBlogWebApp\obj\Debug\GezginKusBlogWebApp.csproj.CopyComplete
 C:\Users\burak\Documents\GitHub\GezginKusBlog\GezginKusBlogWebApp\obj\Debug\GezginKusBlogWebApp.dll
 C:\Users\burak\Documents\GitHub\GezginKusBlog\GezginKusBlogWebApp\obj\Debug\GezginKusBlogWebApp.pdb
+C:\Users\burak\Documents\GitHub\GezginKusBlog\GezginKusBlogWebApp\bin\VeriErisimKatmanii.dll
+C:\Users\burak\Documents\GitHub\GezginKusBlog\GezginKusBlogWebApp\bin\VeriErisimKatmanii.pdb

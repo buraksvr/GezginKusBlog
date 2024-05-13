@@ -52,8 +52,9 @@
                                     </div>
                                     <div class="clearfix"></div>
                                     <div class="mt-3 d-grid">
-                                        <asp:Button ID="btn_giris" runat="server" Text="Giriş Yap" CssClass="btn btn-primary d-block" OnClick="btn_giris_Click" />
-                                    </div>
+                                        <asp:Button ID="btn_giris" runat="server" Text="Giriş Yap" CssClass="btn btn-primary d-block" OnClick="btn_giris_Click" visible="false"/>
+                                        <asp:Button ID="btn_girismodel" runat="server" Text="Giriş Yap" CssClass="btn btn-primary d-block" OnClick="btn_girismodel_Click" />
+                                     </div>
                                 </div>
                             </div>
 

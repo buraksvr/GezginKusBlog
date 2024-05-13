@@ -6,7 +6,12 @@ using System.Threading.Tasks;
 
 namespace VeriErisimKatmanii
 {
-    internal class Kategori
+    public class Kategori
     {
+        public int ID { get; set; }
+        public string Isim { get; set; }
+        public string Aciklama { get; set; }
+        public bool Durum { get; set; }
+
     }
 }
